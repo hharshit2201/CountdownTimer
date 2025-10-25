@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Wedding Celebrations</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <h1 class="site-title">Save the Date</h1>
+        </header>
+        <div class="tabs">
+            <button class="tab-btn active" onclick="openTab('wedding1')">First Wedding</button>
+            <button class="tab-btn" onclick="openTab('wedding2')">Second Wedding</button>
+        </div>
+
+        <div id="wedding1" class="tab-content active">
+            <h1>Rishabh Bhaiya ki Shaadi</h1>
+            <div class="countdown-container">
+                <div id="countdown1" class="countdown"></div>
+            </div>
+            <div class="wedding-details">
+                <h2>Location: Lucknow + Sasaram</h2>
+                <p>Date: November 24, 2025</p>
+                <p>Time: 00:00</p>
+            </div>
+            <div class="gallery-container">
+                <div class="slideshow-container">
+                    <div class="slides fade">
+                        <img src="https://picsum.photos/id/237/800/600" alt="Wedding Photo 1">
+                    </div>
+                    <div class="slides fade">
+                        <img src="https://picsum.photos/id/238/800/600" alt="Wedding Photo 2">
+                    </div>
+                    <div class="slides fade">
+                        <img src="https://picsum.photos/id/239/800/600" alt="Wedding Photo 3">
+                    </div>
+                    <div class="slides fade">
+                        <img src="https://picsum.photos/id/240/800/600" alt="Wedding Photo 4">
+                    </div>
+                    <div class="slides fade">
+                        <img src="https://picsum.photos/id/241/800/600" alt="Wedding Photo 5">
+                    </div>
+                    <div class="slides fade">
+                        <img src="https://picsum.photos/id/242/800/600" alt="Wedding Photo 6">
+                    </div>
+                    <a class="prev" onclick="changeSlide(-1)">❮</a>
+                    <a class="next" onclick="changeSlide(1)">❯</a>
+                </div>
+                <div class="dots-container">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                </div>
+            </div>
+        </div>
+
+        <div id="wedding2" class="tab-content">
+            <h1>Bhaskar Bhaiya ki Shaadi</h1>
+            <div class="countdown-container">
+                <div id="countdown2" class="countdown"></div>
+            </div>
+            <div class="wedding-details">
+                <h2>Location: Ballia + Azamgarh</h2>
+                <p>Date: December 4, 2025</p>
+                <p>Time: 00:00</p>
+            </div>
+            <div class="gallery-container">
+                <div class="slideshow-container">
+                    <div class="slides fade">
+                        <img src="https://picsum.photos/id/237/800/600" alt="Wedding Photo 1">
+                    </div>
+                    <div class="slides fade">
+                        <img src="https://picsum.photos/id/238/800/600" alt="Wedding Photo 2">
+                    </div>
+                    <div class="slides fade">
+                        <img src="https://picsum.photos/id/239/800/600" alt="Wedding Photo 3">
+                    </div>
+                    <div class="slides fade">
+                        <img src="https://picsum.photos/id/240/800/600" alt="Wedding Photo 4">
+                    </div>
+                    <div class="slides fade">
+                        <img src="https://picsum.photos/id/241/800/600" alt="Wedding Photo 5">
+                    </div>
+                    <div class="slides fade">
+                        <img src="https://picsum.photos/id/242/800/600" alt="Wedding Photo 6">
+                    </div>
+                    <a class="prev" onclick="changeSlide(-1)">❮</a>
+                    <a class="next" onclick="changeSlide(1)">❯</a>
+                </div>
+                <div class="dots-container">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <p class="credit">Created & Designed by</p>&nbsp;
+            <div class="credit-name">&nbsp;Harshit Anurag&nbsp;</div>&nbsp;
+            &copy;
+        </footer>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/slideshow.js"></script>
+
+</body>
+</html>
