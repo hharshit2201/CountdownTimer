@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Wedding Celebrations</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/cricket.css">
+    <link rel="import" href="html/cricket.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tone.js for generating sound effect programmatically -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
 </head>
 <body>
     <div class="container">
+        <!-- MUSIC PLAYER -->
         <div class="music-player">
             <audio id="bgMusic">
                 <source src="audio/playlist/bhootni_ke.mp3" type="audio/mpeg">
@@ -26,26 +33,34 @@
                 </div>
             </div>
         </div>
+       
+        <!-- HEADER -->
         <header class="main-header">
             <h1 class="site-title">Save the Date</h1>
         </header>
        
+        <!-- TABS -->
         <div class="tabs">
             <button class="tab-btn active" onclick="openTab('wedding1')">First Wedding</button>
             <button class="tab-btn" onclick="openTab('wedding2')">Second Wedding</button>
         </div>
 
+        <!-- RISHABH -->
         <div id="wedding1" class="tab-content active">
             <h1 class="dulha">Rishabh Bhaiya ki Shaadi</h1>
+            <!-- COUNTDOWN -->
             <div class="countdown-container">
                 <div id="countdown1" class="countdown"></div>
             </div>
+
+            <!-- WEDDING DETAILS -->
             <div class="wedding-details">
                 <h2>मुस्कुराइए आप लखनऊ आ रहे हैं</h2>
                 <p>Date: November 24, 2025</p>
                 <p>Time: 00:00</p>
             </div>
 
+            <!-- ENVELOPE OPENER-->
             <div class="envelope-wrapper">
                 <div class="envelope">
                     <div class="envelope-flap"></div>
@@ -59,6 +74,47 @@
                 </div>
             </div>
 
+            <!-- CRICKET-->
+            <div class="cricket-container">
+                <div class="text-center mb-6">
+                    <h1 class="text-3xl font-bold text-gray-800">The Perfect Yorker</h1>
+                    <p class="text-gray-600">Watch the stumps fly!</p>
+                </div>
+
+                <!-- The Animation Area -->
+                <div id="pitch" class="border-4 border-gray-900 rounded-lg shadow-2xl">
+                    <div id="wicket-container">
+                        <!-- Bails -->
+                        <div id="bail-left" class="bail"></div>
+                        <div id="bail-right" class="bail"></div>
+                        
+                        <!-- Stumps (Individual elements for separate fall) -->
+                        <div id="stump-1" class="stump"></div>
+                        <div id="stump-2" class="stump"></div>
+                        <div id="stump-3" class="stump"></div>
+                    </div>
+
+                    <!-- Ball -->
+                    <div id="ball"></div>
+
+                    <!-- Wicket Down Text -->
+                    <div id="wicket-down-text">
+                        <span id="duck-emoji">😭🦆</span>
+                        1st WICKET DOWN!
+                    </div>
+                </div>
+
+                <!-- Control Button -->
+                <button id="animate-btn" 
+                        class="mt-8 px-6 py-3 bg-red-600 text-white font-bold text-lg rounded-xl shadow-lg hover:bg-red-700 transition duration-150 transform hover:scale-105 active:scale-95">
+                    BOWL THE BALL
+                </button>
+
+                <!-- Status Message -->
+                <div id="status" class="mt-4 text-lg font-semibold text-gray-700 h-6">Ready to Bowl!</div>
+            </div>
+            
+            <!-- GALLERY-->
             <div class="gallery-container">
                 <div class="slideshow-container">
                     <div class="slides fade">
@@ -93,16 +149,61 @@
             </div>
         </div>
 
+        <!-- BHASKAR -->
         <div id="wedding2" class="tab-content">
             <h1>Bhaskar Bhaiya ki Shaadi</h1>
+            <!-- COUNTDOWN -->
             <div class="countdown-container">
                 <div id="countdown2" class="countdown"></div>
             </div>
+            <!-- WEDDING DETAILS -->
             <div class="wedding-details">
                 <h2>Location: Ballia + Azamgarh</h2>
                 <p>Date: December 4, 2025</p>
                 <p>Time: 00:00</p>
             </div>
+
+            <!-- CRICKET-->
+            <div class="cricket-container">
+                <div class="text-center mb-6">
+                    <h1 class="text-3xl font-bold text-gray-800">The Perfect Yorker</h1>
+                    <p class="text-gray-600">Watch the stumps fly!</p>
+                </div>
+
+                <!-- The Animation Area -->
+                <div id="pitch" class="border-4 border-gray-900 rounded-lg shadow-2xl">
+                    <div id="wicket-container">
+                        <!-- Bails -->
+                        <div id="bail-left" class="bail"></div>
+                        <div id="bail-right" class="bail"></div>
+                        
+                        <!-- Stumps (Individual elements for separate fall) -->
+                        <div id="stump-1" class="stump"></div>
+                        <div id="stump-2" class="stump"></div>
+                        <div id="stump-3" class="stump"></div>
+                    </div>
+
+                    <!-- Ball -->
+                    <div id="ball"></div>
+
+                    <!-- Wicket Down Text -->
+                    <div id="wicket-down-text">
+                        <span id="duck-emoji">😭🦆</span>
+                        1st WICKET DOWN!
+                    </div>
+                </div>
+
+                <!-- Control Button -->
+                <button id="animate-btn" 
+                        class="mt-8 px-6 py-3 bg-red-600 text-white font-bold text-lg rounded-xl shadow-lg hover:bg-red-700 transition duration-150 transform hover:scale-105 active:scale-95">
+                    BOWL THE BALL
+                </button>
+
+                <!-- Status Message -->
+                <div id="status" class="mt-4 text-lg font-semibold text-gray-700 h-6">Ready to Bowl!</div>
+            </div>
+
+            <!-- GALLERY-->
             <div class="gallery-container">
                 <div class="slideshow-container">
                     <div class="slides fade">
@@ -147,5 +248,6 @@
     <script src="js/slideshow.js"></script>
     <script src="js/music.js"></script>
     <script src="js/envelope.js"></script>
+    <script src="js/cricket.js"></script>
 </body>
 </html>

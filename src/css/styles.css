@@ -895,9 +895,6 @@ input:checked + .toggle-track .dark-icon {
 }
 
 .music-control {
-    position: fixed;
-    top: 20px;
-    left: 20px;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -942,7 +939,7 @@ input:checked + .toggle-track .dark-icon {
 .music-controls {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 .track-control {
@@ -1067,4 +1064,11 @@ input:checked + .toggle-track .dark-icon {
 
 .envelope {
     animation: float 3s ease-in-out infinite;
+}
+
+.cricket-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
