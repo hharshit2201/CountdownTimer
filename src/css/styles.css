@@ -48,6 +48,17 @@ body::before {
     box-shadow: 0 8px 32px rgba(33, 147, 176, 0.1);
 }
 
+.dulha {
+    background: linear-gradient(45deg, #ffd700, #ff69b4);
+    -webkit-background-clip: text;
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 15px;
+    text-align: center;
+    animation: float 3s ease-in-out infinite;
+    color: transparent;
+    background-clip: text;
+}
+
 .tabs {
     display: flex;
     justify-content: center;
@@ -146,6 +157,7 @@ body::before {
 
 .countdown {
     display: flex;
+    gap: 60px;
 }
 
 .time-section {
@@ -186,6 +198,7 @@ body::before {
 
 .label {
     font-size: 1rem;
+    font-family: 'Playfair Display', serif;
     color: rgba(255, 255, 255, 0.9);
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -215,10 +228,18 @@ h1::after {
     text-align: center;
     padding: 20px;
     border-top: 1px solid rgba(0,0,0,0.1);
+    background: linear-gradient(45deg, #ffd700, #ff69b4);
+    -webkit-background-clip: text;
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 15px;
+    text-align: center;
+    animation: float 3s ease-in-out infinite;
+    color: transparent;
+    background-clip: text;
 }
 
 .wedding-details h2 {
-    color: #2193b0;
+    /* color: #2193b0; */
     margin-bottom: 15px;
     font-family: 'Playfair Display', serif;
 }
@@ -226,7 +247,7 @@ h1::after {
 .wedding-details p {
     margin: 10px 0;
     font-size: 1.1rem;
-    color: #555;
+    /* color: #555; */
 }
 
 /* Add these styles after the imports and before existing styles */
@@ -871,4 +892,179 @@ input:checked + .toggle-track .dark-icon {
     50% {
         filter: brightness(1.2) drop-shadow(0 0 8px rgba(33, 147, 176, 0.5));
     }
+}
+
+.music-control {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(33, 147, 176, 0.5);
+    backdrop-filter: blur(5px);
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.music-control:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.music-icon {
+    font-size: 1.2rem;
+}
+
+.music-control.muted .music-icon {
+    opacity: 0.5;
+}
+
+.music-player {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 30px;
+    backdrop-filter: blur(5px);
+    border: 2px solid rgba(33, 147, 176, 0.5);
+}
+
+.music-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.track-control {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.track-control:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.track-info {
+    margin-left: 10px;
+    font-family: 'Dancing Script', cursive;
+    color: #2193b0;
+    font-size: 1.1rem;
+    min-width: 100px;
+}
+
+.envelope-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    perspective: 1000px;
+}
+
+.envelope {
+    position: relative;
+    width: 60%;  /* Increased from 300px */
+    height: 250px; /* Increased from 200px */
+    background: linear-gradient(45deg, #ff6b6b, #ff9999);
+    border-radius: 0 0 20px 20px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.envelope-flap {
+    position: absolute;
+    top: -50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff9999, #ffb3b3);
+    clip-path: polygon(50% 50%, 100% 50%, 50% 100%, 0% 50%);
+    transform-origin: top;
+    transition: transform 0.5s ease;
+    z-index: 3;
+}
+
+.envelope.open .envelope-flap {
+    transform: rotateX(180deg);
+    top: 50%;
+}
+
+.envelope-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 2;
+}
+
+.envelope.open .envelope-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.letter {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    color: #2193b0;
+    font-size: 1.1rem; /* Added for better readability */
+    /* padding: 10px; */
+}
+
+.letter h2 {
+    font-size: 2rem; /* Increased from 1.8rem */
+    margin-bottom: 15px;
+    background: linear-gradient(45deg, #ff6b6b, #2193b0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.letter p {
+    font-size: 1.1rem;
+    margin: 15px 0; /* Increased from 10px */
+    line-height: 1.5;
+}
+
+.signature {
+    margin-top: 20px;
+    font-style: italic;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.envelope {
+    animation: float 3s ease-in-out infinite;
 }

@@ -11,24 +11,54 @@
 </head>
 <body>
     <div class="container">
+        <div class="music-player">
+            <audio id="bgMusic">
+                <source src="audio/playlist/bhootni_ke.mp3" type="audio/mpeg">
+            </audio>
+            <div class="music-controls">
+                <button id="prevTrack" class="track-control">⏮️</button>
+                <button id="musicControl" class="music-control">
+                    <span class="music-icon">🔊</span>
+                </button>
+                <button id="nextTrack" class="track-control">⏭️</button>
+                <div class="track-info">
+                    <span id="trackName">Track 1</span>
+                </div>
+            </div>
+        </div>
         <header class="main-header">
             <h1 class="site-title">Save the Date</h1>
         </header>
+       
         <div class="tabs">
             <button class="tab-btn active" onclick="openTab('wedding1')">First Wedding</button>
             <button class="tab-btn" onclick="openTab('wedding2')">Second Wedding</button>
         </div>
 
         <div id="wedding1" class="tab-content active">
-            <h1>Rishabh Bhaiya ki Shaadi</h1>
+            <h1 class="dulha">Rishabh Bhaiya ki Shaadi</h1>
             <div class="countdown-container">
                 <div id="countdown1" class="countdown"></div>
             </div>
             <div class="wedding-details">
-                <h2>Location: Lucknow + Sasaram</h2>
+                <h2>मुस्कुराइए आप लखनऊ आ रहे हैं</h2>
                 <p>Date: November 24, 2025</p>
                 <p>Time: 00:00</p>
             </div>
+
+            <div class="envelope-wrapper">
+                <div class="envelope">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-content">
+                        <div class="letter">
+                            <h2>महाशय ऋषभ के लिए विवाह निमंत्रण</h2>
+                            <p>महाशय ऋषभ, दुखी मन से सूचित किया जाता है कि आपकी शादी 24 नवंबर, 2025 को तय है। अपनी उपस्थिति दर्ज़ कराकर इस कार्यक्रम को मंगलमय करें; भागने की कोशिश न करें, कड़ी निगरानी है!</p>
+                            <p class="signature">शुभकामनाएं,<br>बजरंग दल!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="gallery-container">
                 <div class="slideshow-container">
                     <div class="slides fade">
@@ -115,6 +145,7 @@
     <script src="js/main.js"></script>
     <script src="js/countdown.js"></script>
     <script src="js/slideshow.js"></script>
-
+    <script src="js/music.js"></script>
+    <script src="js/envelope.js"></script>
 </body>
 </html>

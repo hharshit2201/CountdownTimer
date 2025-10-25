@@ -50,6 +50,7 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 500;
+    font-family: 'Playfair Display', serif;
 }
 
 @keyframes float {
