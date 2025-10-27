@@ -235,9 +235,9 @@ h1::after {
 
 .wedding-details {
     font-size: 4rem;
-    margin-top: 40px;
+    margin: 20px;
     text-align: center;
-    padding: 20px;
+    padding: 40px;
     border-top: 1px solid rgba(0,0,0,0.1);
     background: linear-gradient(45deg, #ffd700, #ff69b4);
     -webkit-background-clip: text;
@@ -256,6 +256,8 @@ h1::after {
 
 .wedding-details p {
     margin: 10px 0;
+    font-family: 'Ballet', cursive;
+    
     /* color: #555; */
 }
 
@@ -291,10 +293,11 @@ h1::after {
     background: linear-gradient(45deg, #2193b0, #6dd5ed);
     -webkit-background-clip: text;
     background-clip: text;
-    letter-spacing: 8px;
     margin: 0;
     position: relative;
     display: inline-block;
+    
+    animation: nameGlow 3s ease-in-out infinite;
 }
 
 .site-title::after {
@@ -980,14 +983,14 @@ input:checked + .toggle-track .dark-icon {
 .envelope-wrapper {
     display: flex;
     justify-content: center;
-    margin: 30px 0;
+    margin: 45px 0;
     perspective: 1000px;
 }
 
 .envelope {
     position: relative;
     width: 60%;  /* Increased from 300px */
-    height: 250px; /* Increased from 200px */
+    height: 300px; /* Increased from 200px */
     background: linear-gradient(45deg, #D4AF37, #ff9999);
     border-radius: 0 0 20px 20px;
     cursor: pointer;
@@ -1037,7 +1040,7 @@ input:checked + .toggle-track .dark-icon {
 .letter {
     text-align: center;
     font-family: 'Dancing Script', cursive;
-    color: #2193b0;
+    color: #D4AF37;
     font-size: 1.1rem; /* Added for better readability */
     /* padding: 10px; */
 }
@@ -1052,7 +1055,7 @@ input:checked + .toggle-track .dark-icon {
 }
 
 .letter p {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     margin: 15px 0; /* Increased from 10px */
     line-height: 1.5;
 }
