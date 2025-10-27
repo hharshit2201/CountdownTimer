@@ -1,0 +1,19 @@
+.flowers { margin:0; overflow:auto; }
+    .lane {
+      position:fixed;
+      top:0; bottom:0;
+      width:20%; pointer-events:none;
+      overflow:hidden;
+    }
+    .lane.left { left:0; }
+    .lane.right { right:0; }
+    .flower {
+      position:absolute;
+      top:-10%;
+      animation: fall linear infinite;
+      opacity:0.9;
+      will-change: transform;
+    }
+    @keyframes fall {
+      to { transform: translateY(400vh) rotate(360deg); }
+    }
