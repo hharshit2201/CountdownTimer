@@ -1,6 +1,10 @@
 const playlist = [
     { src: 'audio/bhootni_ke.mp3', name: 'Bhootni Ke' },
-    { src: 'audio/marad.mp3', name: 'Marad' }
+    { src: 'audio/marad.mp3', name: 'Marad' },
+    { src: 'audio/Chubhur.mp3', name: 'Chubhur' },
+    { src: 'audio/aapka_kya_hoga.mp3', name: 'aapka_kya_hoga' },
+    { src: 'audio/ban_gaya_kutta.mp3', name: 'ban_gaya_kutta' },
+    { src: 'audio/zor_ka_jhatka.mp3', name: 'zor_ka_jhatka' },
     // Add more songs as needed
 ];
 

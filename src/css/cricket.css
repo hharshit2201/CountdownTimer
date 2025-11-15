@@ -145,6 +145,96 @@
     font-size: 5rem; /* Large duck emoji */
     margin: 0 auto 10px;
 }
+#pitch-2 {
+    width: 100vw;
+    max-width: 900px;
+    height: 400px;
+    background-color: #556B2F;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#wicket-container-2 {
+    position: absolute;
+    right: 100px;
+    bottom: 40px;
+    height: 180px;
+    width: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#stump-1-2, #stump-2-2, #stump-3-2 {
+    width: 10px;
+    height: 100%;
+    background-color: #D2B48C;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 10;
+    transform-origin: bottom center;
+    transition: transform 0.1s ease-out;
+}
+
+#bail-left-2 {
+    position: absolute;
+    height: 12px;
+    width: 25px;
+    background-color: #F5DEB3;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    z-index: 20;
+    top: -12px;
+    left: 4px;
+    transition: none;
+}
+#bail-right-2 {
+    position: absolute;
+    height: 12px;
+    width: 25px;
+    background-color: #F5DEB3;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    z-index: 20;
+    top: -12px;
+    right: 4px;
+    transition: none;
+}
+
+#ball-2 {
+    width: 30px;
+    height: 30px;
+    background-color: #CC0000;
+    border-radius: 50%;
+    box-shadow: inset -5px -5px 10px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: -30px;
+    top: 150px;
+    z-index: 50;
+}
+
+#wicket-down-text-2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FFD700;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    z-index: 100;
+    text-align: center;
+    line-height: 1.2;
+}
+
+#duck-emoji-2 {
+    display: block;
+    font-size: 5rem;
+    margin: 0 auto 10px;
+}
 
 
 /* Animation Classes (applied by JS) */
